@@ -1,0 +1,73 @@
+{
+    "manifest_version": 2,
+    "default_locale": "en",
+
+    "name": "__MSG_extension_name__",
+    "description": "Give you extra controls for video play on Netflix.",
+    "version": "1.0",
+
+    "icons": {
+        "48": "images/icon-48.png",
+        "96": "images/icon-96.png",
+        "128": "images/icon-128.png",
+        "256": "images/icon-256.png",
+        "512": "images/icon-512.png"
+    },
+
+    "background": {
+        "scripts": [
+            "js/global.js",
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+
+    "content_scripts": [{
+        "matches": [
+            "https://www.netflix.com/*"
+        ],
+        "js": [
+            "vendors/jquery/jquery.min.js",
+            "js/config.js",
+            "js/global.js",
+            "js/utils.js",
+            "js/content.js",
+            "js/controls.js",
+            "js/search.js",
+            "js/prevent.js",
+            "js/ratings.js",
+            "js/trailers.js"
+        ],
+        "css": [
+            "css/style.css"
+        ],
+        "run_at": "document_end"
+    }],
+
+    "browser_action": {
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "19": "images/icon-19.png",
+            "32": "images/icon-32.png",
+            "38": "images/icon-38.png"
+        },
+        "default_title": "__MSG_extension_name__"
+    },
+
+    "permissions": [
+        "storage",
+        "tabs",
+        "https://www.netflix.com/*",
+        "https://movie.douban.com/*",
+        "https://www.rottentomatoes.com/*",
+        "https://us-central1-popcorn-plugin.cloudfunctions.net/*",
+        "*://unogs.com/*"
+    ],
+
+    "web_accessible_resources": [
+		"images/*.*",
+		"html/*.*",
+		"vendors/*.*",
+        "resources/*.*"
+    ]
+}

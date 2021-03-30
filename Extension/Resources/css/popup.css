@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Railway;
+    src: url('../fonts/railway/raleway-regular.ttf');
+}
+@font-face {
+    font-family: Railway-Bold;
+    src: url('../fonts/railway/raleway-bold.ttf');
+}
+@font-face {
+    font-family: Open-Sans;
+    src: url('../fonts/open_sans/opensans-regular.ttf');
+}
+body {
+    font-family: Raleway,sans-serif !important;
+}
+.wp-container {
+    width: 400px !important;
+    height: auto !important;
+    padding: 20px !important;
+}

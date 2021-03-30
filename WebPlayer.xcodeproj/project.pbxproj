@@ -3,15 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848AD4D326130CDF007D932B /* js in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4CD26130CDD007D932B /* js */; };
+		848AD4D426130CDF007D932B /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4CE26130CDE007D932B /* fonts */; };
+		848AD4D526130CDF007D932B /* resources in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4CF26130CDE007D932B /* resources */; };
+		848AD4D626130CDF007D932B /* vendors in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4D026130CDE007D932B /* vendors */; };
+		848AD4D726130CDF007D932B /* css in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4D126130CDE007D932B /* css */; };
+		848AD4D826130CDF007D932B /* html in Resources */ = {isa = PBXBuildFile; fileRef = 848AD4D226130CDE007D932B /* html */; };
 		84E235CC2608F25100A8FEC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E235CB2608F25100A8FEC4 /* AppDelegate.swift */; };
 		84E235CF2608F25100A8FEC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E235CD2608F25100A8FEC4 /* Main.storyboard */; };
 		84E235D12608F25100A8FEC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E235D02608F25100A8FEC4 /* ViewController.swift */; };
 		84E235D32608F25B00A8FEC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84E235D22608F25B00A8FEC4 /* Assets.xcassets */; };
-		84E235DA2608F25C00A8FEC4 /* WebPlayer Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84E235D92608F25C00A8FEC4 /* WebPlayer Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84E235DA2608F25C00A8FEC4 /* Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84E235D92608F25C00A8FEC4 /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84E235DF2608F25C00A8FEC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E235DE2608F25C00A8FEC4 /* Cocoa.framework */; };
 		84E235E22608F25C00A8FEC4 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E235E12608F25C00A8FEC4 /* SafariWebExtensionHandler.swift */; };
 		84E235E52608F25C00A8FEC4 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 84E235E42608F25C00A8FEC4 /* _locales */; };
@@ -41,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				84E235DA2608F25C00A8FEC4 /* WebPlayer Extension.appex in Embed App Extensions */,
+				84E235DA2608F25C00A8FEC4 /* Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +55,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		848AD4CD26130CDD007D932B /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		848AD4CE26130CDE007D932B /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		848AD4CF26130CDE007D932B /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
+		848AD4D026130CDE007D932B /* vendors */ = {isa = PBXFileReference; lastKnownFileType = folder; path = vendors; sourceTree = "<group>"; };
+		848AD4D126130CDE007D932B /* css */ = {isa = PBXFileReference; lastKnownFileType = folder; path = css; sourceTree = "<group>"; };
+		848AD4D226130CDE007D932B /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
 		84E235C72608F25100A8FEC4 /* WebPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E235CA2608F25100A8FEC4 /* WebPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebPlayer.entitlements; sourceTree = "<group>"; };
 		84E235CB2608F25100A8FEC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +68,7 @@
 		84E235D02608F25100A8FEC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84E235D22608F25B00A8FEC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84E235D42608F25B00A8FEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84E235D92608F25C00A8FEC4 /* WebPlayer Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WebPlayer Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E235D92608F25C00A8FEC4 /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E235DE2608F25C00A8FEC4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		84E235E12608F25C00A8FEC4 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		84E235E42608F25C00A8FEC4 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -68,7 +80,7 @@
 		84E235F02608F25C00A8FEC4 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 		84E235F22608F25C00A8FEC4 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		84E235F42608F25C00A8FEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84E235F52608F25C00A8FEC4 /* WebPlayer_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebPlayer_Extension.entitlements; sourceTree = "<group>"; };
+		84E235F52608F25C00A8FEC4 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				84E235C92608F25100A8FEC4 /* WebPlayer */,
-				84E235E02608F25C00A8FEC4 /* WebPlayer Extension */,
+				84E235E02608F25C00A8FEC4 /* Extension */,
 				84E235DD2608F25C00A8FEC4 /* Frameworks */,
 				84E235C82608F25100A8FEC4 /* Products */,
 			);
@@ -104,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				84E235C72608F25100A8FEC4 /* WebPlayer.app */,
-				84E235D92608F25C00A8FEC4 /* WebPlayer Extension.appex */,
+				84E235D92608F25C00A8FEC4 /* Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,15 +142,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84E235E02608F25C00A8FEC4 /* WebPlayer Extension */ = {
+		84E235E02608F25C00A8FEC4 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				84E235E12608F25C00A8FEC4 /* SafariWebExtensionHandler.swift */,
 				84E235F42608F25C00A8FEC4 /* Info.plist */,
-				84E235F52608F25C00A8FEC4 /* WebPlayer_Extension.entitlements */,
+				84E235F52608F25C00A8FEC4 /* Extension.entitlements */,
 				84E235E32608F25C00A8FEC4 /* Resources */,
 			);
-			path = "WebPlayer Extension";
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		84E235E32608F25C00A8FEC4 /* Resources */ = {
@@ -146,6 +158,12 @@
 			children = (
 				84E235E42608F25C00A8FEC4 /* _locales */,
 				84E235E62608F25C00A8FEC4 /* images */,
+				848AD4D126130CDE007D932B /* css */,
+				848AD4CE26130CDE007D932B /* fonts */,
+				848AD4D226130CDE007D932B /* html */,
+				848AD4CD26130CDD007D932B /* js */,
+				848AD4CF26130CDE007D932B /* resources */,
+				848AD4D026130CDE007D932B /* vendors */,
 				84E235E82608F25C00A8FEC4 /* manifest.json */,
 				84E235EA2608F25C00A8FEC4 /* background.js */,
 				84E235EC2608F25C00A8FEC4 /* content.js */,
@@ -178,9 +196,9 @@
 			productReference = 84E235C72608F25100A8FEC4 /* WebPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84E235D82608F25C00A8FEC4 /* WebPlayer Extension */ = {
+		84E235D82608F25C00A8FEC4 /* Extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84E235F82608F25C00A8FEC4 /* Build configuration list for PBXNativeTarget "WebPlayer Extension" */;
+			buildConfigurationList = 84E235F82608F25C00A8FEC4 /* Build configuration list for PBXNativeTarget "Extension" */;
 			buildPhases = (
 				84E235D52608F25C00A8FEC4 /* Sources */,
 				84E235D62608F25C00A8FEC4 /* Frameworks */,
@@ -190,9 +208,9 @@
 			);
 			dependencies = (
 			);
-			name = "WebPlayer Extension";
+			name = Extension;
 			productName = "WebPlayer Extension";
-			productReference = 84E235D92608F25C00A8FEC4 /* WebPlayer Extension.appex */;
+			productReference = 84E235D92608F25C00A8FEC4 /* Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +231,7 @@
 				};
 			};
 			buildConfigurationList = 84E235C22608F25100A8FEC4 /* Build configuration list for PBXProject "WebPlayer" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -226,7 +244,7 @@
 			projectRoot = "";
 			targets = (
 				84E235C62608F25100A8FEC4 /* WebPlayer */,
-				84E235D82608F25C00A8FEC4 /* WebPlayer Extension */,
+				84E235D82608F25C00A8FEC4 /* Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -245,9 +263,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848AD4D626130CDF007D932B /* vendors in Resources */,
 				84E235EB2608F25C00A8FEC4 /* background.js in Resources */,
+				848AD4D426130CDF007D932B /* fonts in Resources */,
+				848AD4D326130CDF007D932B /* js in Resources */,
+				848AD4D526130CDF007D932B /* resources in Resources */,
+				848AD4D826130CDF007D932B /* html in Resources */,
 				84E235F12608F25C00A8FEC4 /* popup.css in Resources */,
 				84E235EF2608F25C00A8FEC4 /* popup.html in Resources */,
+				848AD4D726130CDF007D932B /* css in Resources */,
 				84E235E72608F25C00A8FEC4 /* images in Resources */,
 				84E235E92608F25C00A8FEC4 /* manifest.json in Resources */,
 				84E235E52608F25C00A8FEC4 /* _locales in Resources */,
@@ -281,7 +305,7 @@
 /* Begin PBXTargetDependency section */
 		84E235DC2608F25C00A8FEC4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84E235D82608F25C00A8FEC4 /* WebPlayer Extension */;
+			target = 84E235D82608F25C00A8FEC4 /* Extension */;
 			targetProxy = 84E235DB2608F25C00A8FEC4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -416,9 +440,9 @@
 		84E235F92608F25C00A8FEC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "WebPlayer Extension/WebPlayer_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "WebPlayer Extension/Info.plist";
+				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -435,9 +459,9 @@
 		84E235FA2608F25C00A8FEC4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "WebPlayer Extension/WebPlayer_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "WebPlayer Extension/Info.plist";
+				INFOPLIST_FILE = Extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -505,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84E235F82608F25C00A8FEC4 /* Build configuration list for PBXNativeTarget "WebPlayer Extension" */ = {
+		84E235F82608F25C00A8FEC4 /* Build configuration list for PBXNativeTarget "Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84E235F92608F25C00A8FEC4 /* Debug */,
