@@ -1,10 +1,10 @@
 {
     "extension_name": {
-        "message": "WebPlayer Extension",
+        "message": "WebPlayer",
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "This is WebPlayer Extension. You should tell us what your extension does here.",
+        "message": "Give you extra controls for video play on Netflix.",
         "description": "Description of what the extension does."
     }
 }
