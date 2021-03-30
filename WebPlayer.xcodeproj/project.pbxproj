@@ -23,11 +23,6 @@
 		84E235E52608F25C00A8FEC4 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 84E235E42608F25C00A8FEC4 /* _locales */; };
 		84E235E72608F25C00A8FEC4 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 84E235E62608F25C00A8FEC4 /* images */; };
 		84E235E92608F25C00A8FEC4 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 84E235E82608F25C00A8FEC4 /* manifest.json */; };
-		84E235EB2608F25C00A8FEC4 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 84E235EA2608F25C00A8FEC4 /* background.js */; };
-		84E235ED2608F25C00A8FEC4 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 84E235EC2608F25C00A8FEC4 /* content.js */; };
-		84E235EF2608F25C00A8FEC4 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 84E235EE2608F25C00A8FEC4 /* popup.html */; };
-		84E235F12608F25C00A8FEC4 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 84E235F02608F25C00A8FEC4 /* popup.css */; };
-		84E235F32608F25C00A8FEC4 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 84E235F22608F25C00A8FEC4 /* popup.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,11 +69,6 @@
 		84E235E42608F25C00A8FEC4 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		84E235E62608F25C00A8FEC4 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		84E235E82608F25C00A8FEC4 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		84E235EA2608F25C00A8FEC4 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		84E235EC2608F25C00A8FEC4 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
-		84E235EE2608F25C00A8FEC4 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
-		84E235F02608F25C00A8FEC4 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
-		84E235F22608F25C00A8FEC4 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		84E235F42608F25C00A8FEC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84E235F52608F25C00A8FEC4 /* Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Extension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,11 +155,6 @@
 				848AD4CF26130CDE007D932B /* resources */,
 				848AD4D026130CDE007D932B /* vendors */,
 				84E235E82608F25C00A8FEC4 /* manifest.json */,
-				84E235EA2608F25C00A8FEC4 /* background.js */,
-				84E235EC2608F25C00A8FEC4 /* content.js */,
-				84E235EE2608F25C00A8FEC4 /* popup.html */,
-				84E235F02608F25C00A8FEC4 /* popup.css */,
-				84E235F22608F25C00A8FEC4 /* popup.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -264,19 +249,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				848AD4D626130CDF007D932B /* vendors in Resources */,
-				84E235EB2608F25C00A8FEC4 /* background.js in Resources */,
 				848AD4D426130CDF007D932B /* fonts in Resources */,
 				848AD4D326130CDF007D932B /* js in Resources */,
 				848AD4D526130CDF007D932B /* resources in Resources */,
 				848AD4D826130CDF007D932B /* html in Resources */,
-				84E235F12608F25C00A8FEC4 /* popup.css in Resources */,
-				84E235EF2608F25C00A8FEC4 /* popup.html in Resources */,
 				848AD4D726130CDF007D932B /* css in Resources */,
 				84E235E72608F25C00A8FEC4 /* images in Resources */,
 				84E235E92608F25C00A8FEC4 /* manifest.json in Resources */,
 				84E235E52608F25C00A8FEC4 /* _locales in Resources */,
-				84E235ED2608F25C00A8FEC4 /* content.js in Resources */,
-				84E235F32608F25C00A8FEC4 /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
