@@ -115,8 +115,8 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fgu-3b-SP3">
-                                <rect key="frame" x="202" y="248" width="22" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="1.0" id="0bM-wr-Bcw">
+                                <rect key="frame" x="205" y="248" width="19" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="1.1" id="0bM-wr-Bcw">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
