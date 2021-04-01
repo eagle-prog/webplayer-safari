@@ -2,6 +2,8 @@ let PREVENT_BILLBOARD_AUTOPLAY  = false;
 let PREVENT_TITLE_CARD_AUTOPLAY = false;
 let PREVENT_BIG_ROW_AUTOPLAY    = false;
 let PREVENT_JAWBONE_AUTOPLAY    = false;
+let PREVENT_PREVIEW_AUTOPLAY    = false;
+let PREVENT_TRAILER_AUTOPLAY    = false;
 
 const Prevent = {
     init: async function() {
@@ -19,11 +21,15 @@ const Prevent = {
             PREVENT_TITLE_CARD_AUTOPLAY = true;
             PREVENT_BIG_ROW_AUTOPLAY    = true;
             PREVENT_JAWBONE_AUTOPLAY    = true;
+            PREVENT_PREVIEW_AUTOPLAY    = true;
+            PREVENT_TRAILER_AUTOPLAY    = true;
         } else {
             PREVENT_BILLBOARD_AUTOPLAY  = false;
             PREVENT_TITLE_CARD_AUTOPLAY = false;
             PREVENT_BIG_ROW_AUTOPLAY    = false;
             PREVENT_JAWBONE_AUTOPLAY    = false;
+            PREVENT_PREVIEW_AUTOPLAY    = false;
+            PREVENT_TRAILER_AUTOPLAY    = false;
         }
         
         rebuildObservers();
@@ -53,6 +59,38 @@ function billboardTrailerObserver() {
         onMutate: videos => {
             videos.forEach(v => {
                 if (PREVENT_BILLBOARD_AUTOPLAY) {
+                    superMuteVideo(v);
+                }
+            });
+        },
+        disconnectOnMutate: false,
+        throttleTime: 100
+    });
+}
+
+function previewObserver() {
+    return mutationsFor({
+        parentSelector: "body",
+        childSelector: ".previewModal--player_container video",
+        onMutate: videos => {
+            videos.forEach(v => {
+                if (PREVENT_PREVIEW_AUTOPLAY) {
+                    superMuteVideo(v);
+                }
+            });
+        },
+        disconnectOnMutate: false,
+        throttleTime: 100
+    });
+}
+
+function trailerObserver() {
+    return mutationsFor({
+        parentSelector: ".lolomo",
+        childSelector: ".trailer-billboard video",
+        onMutate: videos => {
+            videos.forEach(v => {
+                if (PREVENT_TRAILER_AUTOPLAY) {
                     superMuteVideo(v);
                 }
             });
@@ -214,7 +252,9 @@ function clearObservers() {
                 TITLE_CARDS_OBSERVER_NAME,
                 BIG_ROW_OBSERVER_NAME,
                 JAWBONE_OBSERVER_NAME,
-                LIST_ORDER_OBSERVER_NAME
+                LIST_ORDER_OBSERVER_NAME, 
+                PREVIEW_OBSERVER_NAME,
+                TRAILER_OBSERVER_NAME,
             ].forEach(cacheKey => {
                 if (typeof CACHE[cacheKey] === "object" && CACHE[cacheKey] !== null) {
                     CACHE[cacheKey].disconnect();
@@ -228,7 +268,9 @@ function clearObservers() {
                 [TITLE_CARDS_OBSERVER_NAME]: null,
                 [BIG_ROW_OBSERVER_NAME]: null,
                 [JAWBONE_OBSERVER_NAME]: null,
-                [LIST_ORDER_OBSERVER_NAME]: null
+                [LIST_ORDER_OBSERVER_NAME]: null,
+                [PREVIEW_OBSERVER_NAME]: null,
+                [TRAILER_OBSERVER_NAME]: null,
             };
         }
 
@@ -242,14 +284,17 @@ function buildObservers() {
         onMutate: lolomos => {
             const LOLOMO = lolomos[0];
 
-            window[NETFLIX_TWEAKED_DATA_NAME][BILLBOARD_OBSERVER_NAME] = billboardTrailerObserver();
+            window[NETFLIX_TWEAKED_DATA_NAME][BILLBOARD_OBSERVER_NAME]   = billboardTrailerObserver();
             window[NETFLIX_TWEAKED_DATA_NAME][TITLE_CARDS_OBSERVER_NAME] = titleCardTrailerObserver();
-            window[NETFLIX_TWEAKED_DATA_NAME][BIG_ROW_OBSERVER_NAME] = bigRowTrailerObserver();
-            window[NETFLIX_TWEAKED_DATA_NAME][JAWBONE_OBSERVER_NAME] = jawboneTrailerObserver();
-            window[NETFLIX_TWEAKED_DATA_NAME][LIST_ORDER_OBSERVER_NAME] = listOrderObserver(LOLOMO);
+            window[NETFLIX_TWEAKED_DATA_NAME][BIG_ROW_OBSERVER_NAME]     = bigRowTrailerObserver();
+            window[NETFLIX_TWEAKED_DATA_NAME][JAWBONE_OBSERVER_NAME]     = jawboneTrailerObserver();
+            window[NETFLIX_TWEAKED_DATA_NAME][PREVIEW_OBSERVER_NAME]     = previewObserver();
+            window[NETFLIX_TWEAKED_DATA_NAME][LIST_ORDER_OBSERVER_NAME]  = listOrderObserver(LOLOMO);
         },
         disconnectOnMutate: true
     });
+    window[NETFLIX_TWEAKED_DATA_NAME][PREVIEW_OBSERVER_NAME] = previewObserver();
+    window[NETFLIX_TWEAKED_DATA_NAME][TRAILER_OBSERVER_NAME] = trailerObserver();
 }
 
 function monkeyPatchPushState() {
