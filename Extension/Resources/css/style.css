@@ -35,6 +35,9 @@
 .wp-button .material-icons {
     font-size: 40px;
 }
+.slider {
+    padding: 0px !important;
+}
 #wp-control-speed-rate, #wp-control-cvp-x, #wp-control-cvp-y {
     width: 60px;
     color: #000;
