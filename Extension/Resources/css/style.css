@@ -1,6 +1,13 @@
 :root {
     color-scheme: light dark;
 }
+.nf-player-container .wp-controls-wrapper,
+.nf-player-container.postplay .wp-controls-wrapper {
+    display: none;
+}
+.nf-player-container.active:not(.postplay) .wp-controls-wrapper {
+    display: block;
+}
 .wp-controls-wrapper {
     direction: ltr;
     position: absolute;
