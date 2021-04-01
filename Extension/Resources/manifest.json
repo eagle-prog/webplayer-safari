@@ -56,7 +56,6 @@
 
     "permissions": [
         "storage",
-        "tabs",
         "https://www.netflix.com/*",
         "https://movie.douban.com/*",
         "https://www.rottentomatoes.com/*",
