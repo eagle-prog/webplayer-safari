@@ -54,9 +54,9 @@ const Search = {
     splitCategory: function(line) {
         const regExp   =  /^(\S+)\s(.+)$/; //regex to seperate category number and corresponding name
         let match      = null;
-        const trimLine = line.replace(/ +/, ""); //trim leading whitespace
+        const trimLine = line.replace(/ +/, '').replace(/\r?\n|\r/, ''); //trim leading whitespace and line break
 
-        if((match = regExp.exec(trimLine)) !== null){
+        if ((match = regExp.exec(trimLine)) !== null) {
             if(match.index === regExp.lastIndex){
                 regExp.lastIndex++;
             }
@@ -83,8 +83,14 @@ const Search = {
                     let categoryLink = null;
                     let categoryName = null;
                     for(let line = 0; line< lines.length;line++){
-                        categoryLink = this.splitCategory(lines[line])[1];
-                        categoryName = this.splitCategory(lines[line])[2];
+                        const category = this.splitCategory(lines[line]);
+
+                        if (!category) {
+                            continue;
+                        }
+
+                        categoryLink = category[1];
+                        categoryName = category[2];
                         $('.wp-reveal-items').append(this.createRevealItem(categoryLink, categoryName));
                     }
                     resolve();
