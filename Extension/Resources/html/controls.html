@@ -26,7 +26,7 @@
             <label for="wp-control-contrast" class="wp-label w-100 m-r-10">Contrast</label>
             <input type="range" min="0" max="300" step="1" value="100" class="slider" id="wp-control-contrast">
         </div>
-        <div class="wp-d-flex wp-justify-center m-t-10">
+        <div class="wp-d-flex wp-justify-center m-t-20">
             <button type="button" class="wp-button wp-btn-reset-bsc">Reset</button>
         </div>
     </div>
@@ -36,37 +36,45 @@
             <input type="number" min="0.1" max="20" step="0.02" value="1" class="m-r-10" id="wp-control-speed-rate">
             <input type="range" min="0.1" max="20" step="0.02" value="1" class="slider" id="wp-control-speed-slider">
         </div>
+        <div class="wp-d-flex wp-justify-center m-t-20">
+            <button type="button" class="wp-button wp-btn-reset-ps">Reset</button>
+        </div>
     </div>
-    <div class="wp-controls-detail wp-d-none wp-d-flex wp-justify-center wp-align-center" id="wp-controls-cvp">
-        <div class="m-t-10 m-r-20">
-            <div class="wp-d-flex">
-                <label for="wp-control-cvp-x" class="wp-label m-r-10">X:</label>
-                <input type="number" value=0 step=10 id="wp-control-cvp-x" class="wp-control-cvp-position">
+    <div class="wp-controls-detail wp-d-none" id="wp-controls-cvp">
+        <div class="wp-d-flex wp-justify-center wp-align-center">
+            <div class="m-t-10 m-r-20">
+                <div class="wp-d-flex">
+                    <label for="wp-control-cvp-x" class="wp-label m-r-10">X:</label>
+                    <input type="number" value=0 step=10 id="wp-control-cvp-x" class="wp-control-cvp-position">
+                </div>
+                <div class="wp-d-flex m-t-10">
+                    <label for="wp-control-cvp-y" class="wp-label m-r-10">Y:</label>
+                    <input type="number" value=0 step=10 id="wp-control-cvp-y" class="wp-control-cvp-position">
+                </div>
             </div>
-            <div class="wp-d-flex m-t-10">
-                <label for="wp-control-cvp-y" class="wp-label m-r-10">Y:</label>
-                <input type="number" value=0 step=10 id="wp-control-cvp-y" class="wp-control-cvp-position">
+            <div class="m-t-10">
+                <div>
+                    <button type="button" class="wp-button wp-btn-control-cvp" data-target="up">
+                        <span class="material-icons">north</span>
+                    </button>
+                </div>
+                <div style="margin-top: -5px;">
+                    <button type="button" class="wp-button wp-btn-control-cvp" data-target="left">
+                        <span class="material-icons">west</span>
+                    </button>
+                    <button type="button" class="wp-button wp-btn-control-cvp" data-target="right">
+                        <span class="material-icons">east</span>
+                    </button>
+                </div>
+                <div style="margin-top: -5px;">
+                    <button type="button" class="wp-button wp-btn-control-cvp" data-target="down">
+                        <span class="material-icons">south</span>
+                    </button>
+                </div>
             </div>
         </div>
-        <div>
-            <div>
-                <button type="button" class="wp-button wp-btn-control-cvp" data-target="up">
-                    <span class="material-icons">north</span>
-                </button>
-            </div>
-            <div>
-                <button type="button" class="wp-button wp-btn-control-cvp" data-target="left">
-                    <span class="material-icons">west</span>
-                </button>
-                <button type="button" class="wp-button wp-btn-control-cvp" data-target="right">
-                    <span class="material-icons">east</span>
-                </button>
-            </div>
-            <div>
-                <button type="button" class="wp-button wp-btn-control-cvp" data-target="down">
-                    <span class="material-icons">south</span>
-                </button>
-            </div>
+        <div class="wp-d-flex wp-justify-center m-t-20">
+            <button type="button" class="wp-button wp-btn-reset-cvp">Reset</button>
         </div>
     </div>
     <div class="wp-controls-detail wp-d-none" id="wp-controls-rsfz">
@@ -86,9 +94,9 @@
             <button type="button" class="wp-button wp-btn-zoom-out">
                 <span class="material-icons">zoom_out</span>
             </button>
-            <button type="button" class="wp-button wp-btn-reset-rsfz">
-                <span class="material-icons">not_interested</span>
-            </button>
+        </div>
+        <div class="wp-d-flex wp-justify-center m-t-20">
+            <button type="button" class="wp-button wp-btn-reset-rsfz">Reset</button>
         </div>
     </div>
 </div>

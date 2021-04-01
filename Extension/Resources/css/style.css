@@ -43,7 +43,7 @@
 #wp-controls-cvp .wp-button .material-icons {
     font-size: 24px;
 }
-.wp-btn-reset-bsc {
+.wp-btn-reset-bsc, .wp-btn-reset-ps, .wp-btn-reset-cvp, .wp-btn-reset-rsfz {
     background: rgb(255 255 255 / 10%);
     padding-top: 10px;
     padding-bottom: 10px;

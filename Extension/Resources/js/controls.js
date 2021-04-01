@@ -31,8 +31,10 @@ const Controls = {
         $('#wp-controls-bsc .slider').change(this.onChangeBSC);
         $('#wp-control-speed-rate').change(this.onChangeSpeedInput);
         $('#wp-control-speed-slider').change(this.onChangeSpeedSlider);
+        $('.wp-btn-reset-ps').click(this.onClickBtnResetPS);
         $('.wp-btn-control-cvp').click(this.onClickBtnCVP);
         $('.wp-control-cvp-position').change(this.onChangeCVPInput);
+        $('.wp-btn-reset-cvp').click(this.onClickBtnResetCVP);
         $('.wp-btn-rotate').click(this.onClickBtnRotate);
         $('.wp-btn-spin').click(this.onClickBtnSpin);
         $('.wp-btn-flip').click(this.onClickBtnFlip);
@@ -86,6 +88,11 @@ const Controls = {
         $('#wp-control-speed-rate').val(speed);
         changePS(speed);
     },
+    onClickBtnResetPS: function() {
+        $('#wp-control-speed-slider').val(1);
+        $('#wp-control-speed-rate').val(1);
+        changePS(1);
+    },
     /**
      * Event when click shortcut icon
      */
@@ -130,6 +137,11 @@ const Controls = {
         const x = Number($('#wp-control-cvp-x').val());
         const y = Number($('#wp-control-cvp-y').val());
         changeCVP(x, y);
+    },
+    onClickBtnResetCVP: function() {
+        $('#wp-control-cvp-x').val(0);
+        $('#wp-control-cvp-y').val(0);
+        changeCVP(0, 0);
     },
     /**
      * Event when click rotate button

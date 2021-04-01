@@ -316,7 +316,7 @@ function setWindowHistoryListeners() {
 }
 
 function ntLog(what) {
-    console.log(`%c Netflix Tweaked ${new Date()} `, "font-size:14px;color:white;background-color:#2E2E2E;", what);
+    // console.log(`%c Netflix Tweaked ${new Date()} `, "font-size:14px;color:white;background-color:#2E2E2E;", what);
 }
 
 // Modified underscore.js throttle, borrowed from https://stackoverflow.com/a/27078401
