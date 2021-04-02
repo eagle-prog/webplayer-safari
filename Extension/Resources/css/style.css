@@ -47,7 +47,6 @@
 }
 #wp-control-speed-rate, #wp-control-cvp-x, #wp-control-cvp-y {
     width: 60px;
-    color: #000;
     text-align: right;
 }
 #wp-controls-cvp .wp-button .material-icons {
