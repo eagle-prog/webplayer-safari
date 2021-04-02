@@ -5,10 +5,6 @@ init();
  */
 async function init() {
     setPopup('html/popup.html');
-
-    await setValueToStorage({ wp_prevent_auto_play: true });
-    await setValueToStorage({ wp_show_ratings: true });
-    await setValueToStorage({ wp_show_trailers: true });
     
     chrome.tabs.query({
         url: 'https://www.netflix.com/*'
@@ -25,6 +21,12 @@ async function init() {
 function setPopup(popup) {
     chrome.browserAction.setPopup({popup: popup});
 }
+
+chrome.runtime.onInstalled.addListener(async function() {
+    await setValueToStorage({ wp_prevent_auto_play: true });
+    await setValueToStorage({ wp_show_ratings: true });
+    await setValueToStorage({ wp_show_trailers: true });
+});
 
 /*------------- Ratings -------------- */
 const m = "https://unogs.com/",
