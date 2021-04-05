@@ -59,7 +59,9 @@ async function onRefreshBtnClicked() {
         url: 'https://www.netflix.com/*'
     }, (tabs) => {
         for (const tab of tabs) {
-            chrome.tabs.reload(tab.id);
+            if (tab.url.includes('https://www.netflix.com/')) {
+                chrome.tabs.reload(tab.id);
+            }
         }
     });
 }
