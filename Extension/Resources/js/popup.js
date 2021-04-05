@@ -33,6 +33,7 @@ function initEvents() {
     $('.chk-prevent-auto-play').change(onChangePreventAutoPlay);
     $('.chk-show-ratings').change(onChangeShowRatings);
     $('.chk-show-trailers').change(onChangeShowTrailers);
+    $('.btn-refresh').click(onRefreshBtnClicked);
 }
 
 async function onChangePreventAutoPlay() {
@@ -51,6 +52,16 @@ async function onChangeShowTrailers() {
     const checked = $(this).is(':checked');
     await setValueToStorage({ wp_show_trailers: checked });
     sendMessage({action: SWITCH_TRAILERS_UPDATED});
+}
+
+async function onRefreshBtnClicked() {
+    chrome.tabs.query({
+        url: 'https://www.netflix.com/*'
+    }, (tabs) => {
+        for (const tab of tabs) {
+            chrome.tabs.reload(tab.id);
+        }
+    });
 }
 
 function sendMessage(data) {
