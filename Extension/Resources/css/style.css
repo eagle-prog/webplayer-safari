@@ -107,7 +107,6 @@
 .popcorn-source {
     display: flex;
     flex: row wrap;
-    height: 65px;
 }
 .popcorn-source > a > div {
     display: flex;

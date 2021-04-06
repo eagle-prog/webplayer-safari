@@ -24,8 +24,8 @@ function addTrailerBtn(e, t, n) {
 
     const trailerBtn = `
         <a no-referrer="" no-opener="" no-follow="" class="netflix-trailer">
-            <span class="nf-icon-button nf-flat-button nf-flat-button-primary nf-flat-button-uppercase">
-                <span class="nf-flat-button-text">Watch Trailer</span>
+            <span class="nf-icon-button nf-flat-button nf-flat-button-primary nf-flat-button-uppercase" style="padding: 5px 10px;font-size: 14px;border-radius: 3px;">
+                <span class="nf-flat-button-text">Trailer</span>
             </span>
         </a>
     `;
