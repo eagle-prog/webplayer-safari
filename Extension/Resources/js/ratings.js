@@ -4,7 +4,7 @@ const Ratings = {
     },
     update: async function() {
         const isShowRatingsEnabled = await isShowRatings();
-        const css    = `.popcorn-source{display : ${isShowRatingsEnabled ? 'flex' : 'none'} !important}`;
+        const css    = `.popcorn-source a{display : ${isShowRatingsEnabled ? 'flex' : 'none'} !important}`;
         const style  = document.createElement('style');
     
         style.appendChild(document.createTextNode(css));
@@ -100,39 +100,39 @@ function d(e, t, n = !1) {
     let o, r;
     "imdb" === e ? r = "IMDb" : "rt" === e ? (r = "Tomatometer", o = e, t.rating >= 75 ? o += "certified" : o += t.rating >= 65 || null === t.rating ? "fresh" : "rotten") : r = e[0].toUpperCase() + e.slice(1);
     const a = l("div", {
-            className: c + "logo",
-            attrs: {
-                title: r,
-                "aria-label": r,
-                style: `background-image:url(${chrome.runtime.getURL(`images/${o||e}.png`)})`
-            }
-        }),
-        i = t.rating ? "" : "Not enough votes or our data is outdated. Click to check in the source page.",
-        s = l("div", {
-            className: c + "rating",
-            text: t.rating || "-",
-            attrs: {
-                title: i,
-                "aria-label": i
-            }
-        });
+        className: c + "logo",
+        attrs: {
+            title: r,
+            "aria-label": r,
+            style: `background-image:url(${chrome.runtime.getURL(`images/${o||e}.png`)})`
+        }
+    }),
+    i = t.rating ? "" : "Not enough votes or our data is outdated. Click to check in the source page.",
+    s = l("div", {
+        className: c + "rating",
+        text: t.rating || "-",
+        attrs: {
+            title: i,
+            "aria-label": i
+        }
+    });
     let d;
     !n && t.votes && (d = l("div", {
         className: c + "votes",
         text: t.votes + " votes"
     }));
     const u = l("div", {
-            className: c + "main"
-        }, [s, d]),
-        m = l("div", {
-            className: e
-        }, [a, u]),
-        p = {
-            "no-referrer": "",
-            "no-opener": "",
-            "no-follow": "",
-            target: "_blank"
-        };
+        className: c + "main"
+    }, [s, d]),
+    m = l("div", {
+        className: e
+    }, [a, u]),
+    p = {
+        "no-referrer": "",
+        "no-opener": "",
+        "no-follow": "",
+        target: "_blank"
+    };
     t.url && (p.href = t.url);
     const w = l("a", {
         attrs: p
@@ -165,10 +165,10 @@ function u(e, t, r) {
             text: t.imdb.awards
         }));
         const a = s.reduce((e, r) => (o[r] && t[r] && e.push(d(r, t[r], n)), e), []),
-            i = l("div", {
-                className: c + "source"
-            }, a),
-            u = ["popcorn-container-" + e];
+        i = l("div", {
+            className: c + "source"
+        }, a),
+        u = ["popcorn-container-" + e];
         return n && u.push("popcorn--minimal"), l("div", {
             className: u,
             attrs: {
@@ -326,7 +326,8 @@ function B(e, n) {
             type: s
         }
     }(n), "netflix", t => {
-        u(e, t, n)
+        u(e, t, n);
+        addTrailerBtn(e, t, n);
     })
 }
 

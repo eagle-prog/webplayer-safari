@@ -92,6 +92,9 @@
 #wp-btn-reveal .material-icons {
     font-size: 1.9em;
 }
+.netflix-trailer {
+    margin-top: 10px;
+}
 
 /* Ratings */
 .popcorn-awards {
@@ -104,6 +107,7 @@
 .popcorn-source {
     display: flex;
     flex: row wrap;
+    height: 65px;
 }
 .popcorn-source > a > div {
     display: flex;

@@ -16,6 +16,8 @@
 
     "background": {
         "scripts": [
+            "vendors/jquery/jquery.min.js",
+            "js/config.js",
             "js/global.js",
             "js/background.js"
         ],

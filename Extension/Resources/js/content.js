@@ -7,7 +7,7 @@ function handleMessage(message, sender, sendResponse) {
     } else if (message.action === SWITCH_RATINGS_UPDATED) {
         location.reload();
     } else if (message.action === SWITCH_TRAILERS_UPDATED) {
-
+        location.reload();
     }
 }
 
@@ -33,6 +33,7 @@ window.onload = async function() {
     Search.init();
     Prevent.init();
     Ratings.init();
+    Trailers.init();
     
     chrome.runtime.onMessage.addListener(handleMessage);
 }

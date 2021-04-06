@@ -6,6 +6,7 @@ const DEFAULTS = {
 const SWITCH_PREVENT_UPDATED  = 'switch_prevent_updated';
 const SWITCH_RATINGS_UPDATED  = 'switch_ratings_updated';
 const SWITCH_TRAILERS_UPDATED = 'switch_trailers_updated';
+const GET_TRAILER             = 'GET_TRAILER';
 const ScaleMap = {
     0: 1.0,
     15: 0.7,

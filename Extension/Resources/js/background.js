@@ -114,9 +114,10 @@ function y(e) {
 }
 chrome.tabs.onActivated.addListener(t => {
     l(e === t.tabId)
-}), 
+}),
 chrome.runtime.onMessage.addListener(({
-    type: e
+    type: e,
+    url: url,
 } = {}, t, n) => {
     "activation" === e && (! function(e = !1) {
         const t = +new Date;
@@ -147,7 +148,15 @@ chrome.runtime.onMessage.addListener(({
         }, 1e3)
     }(m), n({
         id: t.tab.id
-    }))
+    }));
+
+    if (e === GET_TRAILER) {
+        $.getJSON(url, function(data) {
+            chrome.tabs.create({
+                url: 'https://www.youtube.com/watch?v=' + data.items[0].id.videoId
+            });
+        });
+    }
 });
 const o = "__production__",
 i = "__production__" === o ? "https://us-central1-popcorn-plugin.cloudfunctions.net/api/v1" : "http://localhost:5001/popcorn-plugin/us-central1/api/v1",
